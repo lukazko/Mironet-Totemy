@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.flex-container {
+    padding-top: 100px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 850px;   
+}
+
+.flex-item {
+    background-color: #203a60;
+    color: white;
+    font-size: 20px;
+    width: 200px;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
