@@ -1,8 +1,32 @@
 body {
+    margin: 0;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: column wrap;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+body.endsite {
+    background-color: #203a60;
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: -100px;
+
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+.endsite h1, .endsite h2 {
+    color: white;
+}
+
 
 img {
     height: 100px;
@@ -11,23 +35,51 @@ img {
     right: 0px;
 }
 
+img:hover, .flex-item:hover {
+    cursor: pointer;
+}
+
 .flex-container {
-    padding-top: 100px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    height: 100px;
-    width: 850px;   
+    width: 1000px;
+    margin-top: 50px;
 }
 
 .flex-item {
     background-color: #203a60;
     color: white;
     font-size: 20px;
-    width: 200px;
+    width: 250px;
     text-align: center;
-    margin: 20px;
-    padding: 10px;
-    border-radius: 5px;
+    margin: 0px 20px 40px 20px;
+    padding: 30px 10px 10px 10px;
+    border-radius: 10px;
+    box-shadow: 0 6px #999;
+    min-height: 70px;
+}
+
+.flex-item:active {
+    background-color: #192e4d;
+    box-shadow: 0 4px #666;
+    transform: translateY(4px);
+}
+
+.flex-item:hover {
+    background-color: #192e4d;
+}
+
+a {
+    text-decoration: none;
+}
+
+.endsite .flex-item {
+    color: #203a60;
+    background-color: white;
+    font-size: 25px;
+    width: 250px;
+    padding: 20px 10px 10px 10px;
+
 }
