@@ -1,27 +1,54 @@
 body {
     margin: 0;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    /*justify-content: center;
     align-items: center;
-    flex-flow: column wrap;
+    flex-flow: column wrap;*/
     font-family: 'Segoe UI';
 }
 
 body.endsite {
     background-color: #203a60;
+    display: grid;
 }
 
 h1 {
     font-size: 48px;
     /*margin-top: -150px;*/
     color: #203a60;
-    margin-top: -50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.servis-index, .vraceni {
+    grid-template-areas:
+    'first'
+    'second';
+
+}
+
+.first-row {
+    grid-area: first;
+    justify-self: center;
+    align-self: center;
+}
+
+.grid-container.second-row {
+    grid-area: second;
+    align-self: start;
+    justify-self: center;
+}
+
+.servis h1, .reklamace h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
 
 h2 {
     font-size: 30px;
-    margin-top: 0px;
+    margin-top: 25px;
 }
 
 .endsite h1, .endsite h2 {
@@ -37,26 +64,42 @@ img.chatbot {
 }
 
 .endsite img {
-    width: 450px;
+    width: 400px;
     cursor: default;
-    margin-left: 100px;
+    grid-area: img;
+    margin-top: 50%;
 }
 
-.endsite .flex-container {
-    margin: 0px;
+.endsite .grid-container {
+    grid-template-areas:
+    'success img'
+    'space img';
+    align-self: center;
+    justify-self: center;
 }
 
-img:hover, .flex-item:hover {
+.endsite .success {
+    grid-area: success;
+}
+
+img:hover, .grid-item:hover {
     cursor: pointer;
 }
 
-.flex-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    margin-left: 100px;
-    margin-right: 100px;
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-self: center;
+    justify-self: center;
+    gap: 40px;
+}
+
+.vraceni .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-self: center;
+    justify-self: center;
+    gap: 40px;
 }
 
 .flex-footer {
@@ -66,6 +109,7 @@ img:hover, .flex-item:hover {
     align-items: left;
     width: 100%;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .nav {
@@ -74,22 +118,22 @@ img:hover, .flex-item:hover {
     width: 175px;
     text-align: center;
     /*margin: 0px 30px 40px 20px;*/
-    margin-left: 40px;
     padding: 10px 10px 10px 10px;
     border-radius: 10px;
     box-shadow: 0 6px #999;
-    min-height: 70px;
+    min-height: 80px;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center; 
+    flex-flow: row wrap;   
 }
 
-.nav:hover {
+.back:hover {
     cursor: pointer;
     background-color: #b32727;
 }
 
-.nav:active {
+.back:active {
     background-color: #b32727;
     box-shadow: 0 4px #666;
     transform: translateY(4px);
@@ -99,14 +143,14 @@ img:hover, .flex-item:hover {
     background-color: #CC3535;
 }
 
-.flex-item {
+.grid-item {
     /*background-color: #203a60;-*/
     background-color: #203a60;
     color: white;
     font-size: 34px;
     width: 350px;
     text-align: center;
-    margin: 0px 40px 40px 20px;
+    margin: 0px 0px 0px 0px;
     padding: 10px 10px 10px 10px;
     border-radius: 10px;
     box-shadow: 0 6px #999;
@@ -114,36 +158,49 @@ img:hover, .flex-item:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: row wrap;
 }
 
-.flex-item.white-item {
+.grid-item.white-item {
     /*background-color: #203a60;-*/
     background-color: white;
     color: #203a60;
     border: solid 3px #203a60;
 }
 
-.servis-index .flex-item {
+.servis-index .grid-item {
     min-height: 300px;    
 }
 
-.flex-item:active {
+.reklamace .grid-item {
+    min-height: 300px;    
+}
+
+.vraceni .grid-item {
+    min-height: 300px;    
+}
+
+.grid-item img {
+    width: 150px;
+}
+
+.grid-item:active {
     background-color: #192e4d;
     box-shadow: 0 4px #666;
     transform: translateY(4px);
 }
 
-.flex-item:hover {
+.grid-item:hover {
     background-color: #192e4d;
 }
 
-.flex-item.white-item:active {
+.grid-item.white-item:active {
     background-color: #f6f6f6;
     box-shadow: 0 4px #666;
     transform: translateY(4px);
 }
 
-.flex-item.white-item:hover {
+.grid-item.white-item:hover {
     background-color: #f6f6f6;
 }
 
@@ -151,12 +208,23 @@ a {
     text-decoration: none;
 }
 
-.endsite .flex-item {
-    color: #203a60;
-    background-color: white;
+.endsite .grid-item {
+    color: white;
+    background-color: #CC3535;
     font-size: 25px;
     width: 250px;
     min-height: 90px;
     padding: 0px;
-    margin: 40px 0px 0px 0px;
+    margin: 50px 0px 0px 0px;
+}
+
+.endsite .grid-item:active {
+    background-color: #b32727;
+    box-shadow: 0 4px #666;
+    transform: translateY(4px);
+}
+
+.endsite .grid-item:hover {
+    background-color: #b32727;
+    cursor: pointer;
 }
