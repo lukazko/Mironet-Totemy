@@ -6,7 +6,7 @@ body {
     align-items: center;
     flex-flow: column wrap;*/
     font-family: 'Segoe UI';
-    margin-top: 10%;
+    padding-top: 40px;
 }
 
 body::backdrop {
@@ -18,8 +18,68 @@ body.endsite {
     display: grid; 
 }
 
-body.servis {
-    margin-top: 5%;   
+input {
+    border-radius: 10px;
+    height: 50px;
+    border-color: #ADADAD;
+    border: 2px solid;
+    font-size: 30px;
+    width: 400px;
+    justify-self: center;
+    align-self: center;
+    color: black;
+    font-weight: lighter;
+}
+
+input.psc {
+    width: 120px
+}
+
+.reklamace-1-1 .grid-container,.reklamace-1-2 .grid-container {
+    grid-template-columns: auto;
+    gap: 20px;   
+}
+
+.reklamace-1-1 span,.reklamace-1-2 span {
+    color: #203a60;
+    font-size: 20px;
+    font-weight: bolder;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.grid-inputs {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    justify-self: left;
+    margin-left: 40px;
+}
+
+.grid-inputs div {
+    display: flex;
+    flex-flow: column;
+}
+
+.grid-inputs div span {
+    color: #b32727;
+}
+
+.grid-inputs label {
+    justify-self: end;
+    font-size: 18px;
+    color: #203a60;
+    font-weight: bolder;
+}
+
+.grid-inputs input {
+    align-self: flex-start;
+}
+
+.reklamace-1-2 .grid-container {
+    width: 100%;
+
 }
 
 h1 {
@@ -28,6 +88,8 @@ h1 {
     color: #203a60;
     margin-top: 0px;
     margin-bottom: 0px;
+    justify-self: center;
+    align-self: center;
 }
 
 .servis-index, .vraceni {
@@ -119,6 +181,21 @@ img:hover, .grid-item:hover {
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
+    grid-template-columns: auto;
+    gap: 40px;
+}
+
+.reklamace-1-1 .flex-footer,.reklamace-1-2 .flex-footer {
+    justify-self: center;
+    align-self: center;
+    width: auto;
+    margin-top: 40px;
+}
+
+.reklamace-1-2 .flex-footer {
+    position: absolute;
+    left: 40px;
+    bottom: 20px;
 }
 
 .nav {
@@ -134,7 +211,7 @@ img:hover, .grid-item:hover {
     display: flex;
     justify-content: center;
     align-items: center; 
-    flex-flow: row wrap;   
+    flex-flow: row wrap;  
 }
 
 .back:hover {
@@ -150,6 +227,21 @@ img:hover, .grid-item:hover {
 
 .back {
     background-color: #CC3535;
+}
+
+.next:hover {
+    cursor: pointer;
+    background-color: #3c7903;
+}
+
+.next:active {
+    background-color: #3c7903;
+    box-shadow: 0 4px #666;
+    transform: translateY(4px);
+}
+
+.next {
+    background-color: #468E03;
 }
 
 .grid-item {
