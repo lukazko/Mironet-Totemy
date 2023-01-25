@@ -9,6 +9,9 @@ body {
     margin-top: 10%;
 }
 
+body::backdrop {
+    background-color: white;
+}
 
 body.endsite {
     background-color: #203a60;

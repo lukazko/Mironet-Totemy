@@ -25,4 +25,16 @@
     <img class="chatbot" src="chatbot.jpg">
 </body>
 
+<script>
+    /* Get the element you want displayed in fullscreen mode (a video in this example): */
+    var elem = document.querySelector(".servis-index");
+    var button = document.querySelector(".chatbot");
+    
+    /* When the openFullscreen() function is executed, open the video in fullscreen.
+    Note that we must include prefixes for different browsers, as they don't support the requestFullscreen method yet */
+    button.onclick = function(){
+        elem.requestFullscreen();
+    }
+</script>
+
 </html>
