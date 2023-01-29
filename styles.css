@@ -6,7 +6,9 @@ body {
     align-items: center;
     flex-flow: column wrap;*/
     font-family: 'Segoe UI';
-    padding-top: 40px;
+    padding-top: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 body::backdrop {
@@ -35,12 +37,12 @@ input.psc {
     width: 120px
 }
 
-.reklamace-1-1 .grid-container,.reklamace-1-2 .grid-container {
+.reklamace-1-1 .grid-container,.reklamace-1-2 .grid-container, .servis-1-1 .grid-container {
     grid-template-columns: auto;
     gap: 20px;   
 }
 
-.reklamace-1-1 span,.reklamace-1-2 span {
+.reklamace-1-1 span,.reklamace-1-2 span, .servis-1-1 span {
     color: #203a60;
     font-size: 20px;
     font-weight: bolder;
@@ -52,8 +54,8 @@ input.psc {
 .product {
     background-color: #203a60;
     padding: 20px;
-    margin-left: 40px;
-    margin-right: 40px;
+    /*margin-left: 40px;
+    margin-right: 40px;*/
     border-radius: 10px;
     display: grid;
     grid-template-columns: 100px auto auto;
@@ -96,7 +98,7 @@ input.psc {
     grid-template-columns: auto auto;
     gap: 20px;
     justify-self: left;
-    margin-left: 40px;
+    /*margin-left: 40px;*/
 }
 
 .grid-inputs div {
@@ -119,10 +121,11 @@ input.psc {
     align-self: flex-start;
 }
 
-.reklamace-1-2 .grid-container {
+.reklamace-1-2 .grid-container, .servis-1-1 .grid-container {
     width: 100%;
 
 }
+
 
 h1 {
     font-size: 48px;
@@ -227,14 +230,14 @@ img:hover, .grid-item:hover {
     gap: 40px;
 }
 
-.reklamace-1-1 .flex-footer,.reklamace-1-2 .flex-footer {
+.reklamace-1-1 .flex-footer,.reklamace-1-2 .flex-footer, .servis-1-1 .flex-footer {
     justify-self: center;
     align-self: center;
     width: auto;
     margin-top: 40px;
 }
 
-.reklamace-1-2 .flex-footer {
+.reklamace-1-2 .flex-footer, .servis-1-1 .flex-footer  {
     position: absolute;
     left: 40px;
     bottom: 20px;
@@ -284,6 +287,35 @@ img:hover, .grid-item:hover {
 
 .next {
     background-color: #468E03;
+}
+
+.button {
+    background-color: #203a60;
+    color: white; 
+    padding: 10px 10px 10px 10px; 
+    border-radius: 10px;
+    box-shadow: 0 6px #999;
+    font-size: 30px;
+    /*margin-left: 40px;*/
+    max-width: fit-content;
+}
+
+.button:hover {
+    background-color: #192e4d;
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: #192e4d;
+    background-color: #192e4d;
+    box-shadow: 0 4px #666;
+    transform: translateY(4px);
+    cursor: pointer;
+}
+
+.servis-1-1 .or-span {
+    justify-self: left;
+    /*margin-left: 40px;*/
 }
 
 .grid-item {
